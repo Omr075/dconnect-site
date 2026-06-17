@@ -1,0 +1,135 @@
+/*body*/
+body {
+     background: black;
+     
+   }
+ 
+/*texto em cima abaixo da logo*/
+
+.t1{
+  color: #ffffffff;
+  text-align: center;
+  font-size: 20px;
+}
+   
+/*h3*/
+h3 {
+  color: #94A3B8;
+  text-align: center;
+  padding: 20px 10px 20px 10px; 
+}
+/*SLOGAN*/
+.slogan {
+  color:#38BDF8;
+  text-align: center;
+}
+/*SPAN COBRIR CERTOS TEXTOS*/
+span {
+  color: #38BDF8;
+}
+/*LINKS COMO BOTOES*/
+botao{
+  text-decoration: none;
+  color: #ffffff;
+  border: 1px solid black;
+  border-radius:10px;
+  padding: 6px 42% 6px 43%;
+  background: #007BFF;
+}
+
+/*BOTÃO GERAL*/
+button {
+  color: #ffffff;
+  background:none;
+  border: 1px solid #94A3B8;
+  border-radius: 10px;
+  padding: 10px 20% 10px 20%;
+  margin-left: 85px;
+
+}
+button:hover {
+  #11aff2
+}
+/*FOTO DA LOGO
+* {
+    background-image: url("../img/logo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}*/
+.logo {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    width: 100px;
+    height: 100px;
+
+    background-image: url("../img/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    max-width: 50%;
+    max-height: 50%;
+    z-index: 1000;
+}
+
+
+nav {
+    box-shadow:
+        0 0 20px rgba(0, 212, 255, 0.03),
+        0 10px 40px rgba(0, 0, 0, 0.3);
+        margin-bottom: 10px;
+        color: #00D4FF;
+}
+.nav2 {
+       text-shadow:
+        0 0 10px rgba(0, 212, 255, .4),
+        0 0 10px rgba(0, 212, 255, .2);
+        font-weight: 800;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+input{
+  background-color: transparent;
+  border-radius: 9px;
+  margin: 15px;
+  margin-left: 20px;
+  padding:10px;
+  padding-right: 30%;
+}
+label {
+  color:#38BDF8;
+  font-size: 14px;
+  margin-left: 25px;
+  
+}
+input {
+  color: #ffffffff;
+}
+
+alert {
+  color: #38BDF8;
+}
+
+/*Segundo.trecho do HTML*/
+.t{
+  color:#94A3B8;
+  text-align: center;
+  margin: 10px;
+}
+@view-transition{
+  navigation: auto;
+view-transition-group (root) {
+  animation-duration: 3s;
+}
+/*lista*/
+#lista{
+  color white;
+  text-align: center;
+}
