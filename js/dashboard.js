@@ -2,53 +2,20 @@ const user = JSON.parse(
     localStorage.getItem("mozapi_user")
 );
 
-if(!user){
-
-    window.location.href =
-        "index.html";
-
-}
-
-document
-.getElementById("logout")
-.addEventListener("click", () => {
-
-    localStorage.removeItem(
-        "mozapi_session"
-    );
-
-    window.location.href =
-        "login.html";
-
-});
-<<<<<<< HEAD
-document.getElementById("nome")
-=======
-const session =
-localStorage.getItem(
+const session = localStorage.getItem(
     "mozapi_session"
 );
 
-if(!session){
+if (!session || !user) {
 
     window.location.href =
         "login.html";
 
 }
-document
-.getElementById("logout")
-.addEventListener("click", () => {
 
-    localStorage.removeItem(
-        "mozapi_session"
-    );
+// Dados
 
-    window.location.href =
-        "login.html";
-
-}
 document.getElementById("name")
->>>>>>> 3171a90 (Via github)
 .innerText =
 `Nome: ${user.name}`;
 
@@ -56,19 +23,49 @@ document.getElementById("email")
 .innerText =
 `Email: ${user.email}`;
 
+if(document.getElementById("plan")){
+
+    document.getElementById("plan")
+    .innerText =
+    `Plano: ${user.plan}`;
+
+}
+
+if(document.getElementById("apikey")){
+
+    document.getElementById("apikey")
+    .innerText =
+    `API Key: ${user.apiKey}`;
+
+}
+
+if(document.getElementById("requests")){
+
+    document.getElementById("requests")
+    .innerText =
+    `Requests: ${user.requests}`;
+
+}
+
+if(document.getElementById("created")){
+
+    document.getElementById("created")
+    .innerText =
+    `Criado em: ${user.createdAt}`;
+
+}
+
+// Logout
+
 document
 .getElementById("logout")
 .addEventListener("click", () => {
 
     localStorage.removeItem(
-        "mozapi_user"
+        "mozapi_session"
     );
 
     window.location.href =
-        "index.html";
+        "login.html";
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 3171a90 (Via github)
 });

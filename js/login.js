@@ -16,29 +16,23 @@ document
 
     if(!user){
 
-        alert(
-            "Nenhuma conta encontrada."
-        );
-
+        alert("Nenhuma conta encontrada.");
         return;
+
     }
 
     if(user.email !== email){
 
-        alert(
-            "Email incorreto."
-        );
-
+        alert("Email incorreto.");
         return;
+
     }
 
     if(user.password !== password){
 
-        alert(
-            "Senha incorreta."
-        );
-
+        alert("Senha incorreta.");
         return;
+
     }
 
     localStorage.setItem(

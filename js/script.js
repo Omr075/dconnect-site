@@ -2,12 +2,8 @@ document
 .getElementById("cadastro")
 .addEventListener("submit", function(e){
 
-<<<<<<< HEAD
-    e.preventDefault();                                                                              
-=======
     e.preventDefault();
 
->>>>>>> 3171a90 (Via github)
     const name =
         document.getElementById("nome").value;
 
@@ -23,14 +19,34 @@ document
     if(password !== confirmPassword){
 
         alert("Senhas diferentes.");
-
         return;
+
     }
 
     const user = {
+
+        id: "usr_" + Date.now(),
+
         name,
+
         email,
-        password
+
+        password,
+
+        apiKey:
+        "moz_sk_" +
+        Math.random()
+        .toString(36)
+        .slice(2,18),
+
+        plan: "Free",
+
+        requests: 0,
+
+        createdAt:
+        new Date()
+        .toLocaleString()
+
     };
 
     localStorage.setItem(
@@ -38,11 +54,12 @@ document
         JSON.stringify(user)
     );
 
+    localStorage.setItem(
+        "mozapi_session",
+        "true"
+    );
+
     window.location.href =
         "dashboard.html";
 
 });
-<<<<<<< HEAD
-      
-=======
->>>>>>> 3171a90 (Via github)
