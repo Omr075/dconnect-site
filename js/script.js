@@ -2,7 +2,12 @@ document
 .getElementById("cadastro")
 .addEventListener("submit", function(e){
 
+<<<<<<< HEAD
     e.preventDefault();                                                                              
+=======
+    e.preventDefault();
+
+>>>>>>> 3171a90 (Via github)
     const name =
         document.getElementById("nome").value;
 
@@ -37,4 +42,7 @@ document
         "dashboard.html";
 
 });
+<<<<<<< HEAD
       
+=======
+>>>>>>> 3171a90 (Via github)

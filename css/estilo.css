@@ -1,9 +1,15 @@
 /*body*/
 body {
      background: black;
+<<<<<<< HEAD
 
    }
 
+=======
+     
+   }
+ 
+>>>>>>> 3171a90 (Via github)
 /*texto em cima abaixo da logo*/
 
 .t1{
@@ -11,12 +17,20 @@ body {
   text-align: center;
   font-size: 20px;
 }
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> 3171a90 (Via github)
 /*h3*/
 h3 {
   color: #94A3B8;
   text-align: center;
+<<<<<<< HEAD
   padding: 20px 10px 20px 10px;
+=======
+  padding: 20px 10px 20px 10px; 
+>>>>>>> 3171a90 (Via github)
 }
 /*SLOGAN*/
 .slogan {
@@ -107,7 +121,11 @@ label {
   color:#38BDF8;
   font-size: 14px;
   margin-left: 25px;
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 3171a90 (Via github)
 }
 input {
   color: #ffffffff;
@@ -116,5 +134,23 @@ input {
 alert {
   color: #38BDF8;
 }
+<<<<<<< HEAD
 
   
+=======
+.t{
+  color:#94A3B8;
+  text-align: center;
+  margin: 10px;
+}
+@view-transition{
+  navigation: auto;
+view-transition-group (root) {
+  animation-duration: 3s;
+}
+/*lista*/
+#lista{
+  color white;
+  text-align: center;
+}
+>>>>>>> 3171a90 (Via github)
