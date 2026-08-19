@@ -80,17 +80,35 @@ const gateway =
         )
     );
 
-const adminEmail =
-    process.env.GATEWAY_EMAIL ||
-    gateway.email;
+const admins = [
+    {
+        username:
+        process.env.ADMIN_USERNAME ||
+        "root",
 
-const adminPassword =
-    process.env.GATEWAY_PASSWORD ||
-    gateway.password;
+        password:
+        process.env.ADMIN_PASSWORD ||
+        "123456"
+    },
+    {
+        username:
+        process.env.ADMIN_USERNAME_2 ||
+        "daudo",
+
+        password:
+        process.env.ADMIN_PASSWORD_2 ||
+        "Embarace1234"
+    }
+];
+
 
 const admin =
-    username === adminEmail &&
-    password === adminPassword;
+    admins.find(
+        a =>
+        a.username === username &&
+        a.password === password
+    );
+
 
 if(!admin){
 
@@ -104,7 +122,6 @@ if(!admin){
     });
 
 }
-
 
 /*
  * Criar sessão administrativa
@@ -147,11 +164,10 @@ return res.json({
     token:
     adminToken,
 
-    admin: {
-        username:
-        adminEmail
-    }
-
+admin: {
+    username:
+    admin.username
+}
 });
 
         } catch(err){
