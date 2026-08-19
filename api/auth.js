@@ -179,12 +179,20 @@ router.post("/login", (req, res) => {
         );
 
 
+const gatewayEmail =
+    process.env.GATEWAY_EMAIL ||
+    gateway.email;
+
+const gatewayPassword =
+    process.env.GATEWAY_PASSWORD ||
+    gateway.password;
+
+
 if (
     gateway.enabled &&
-    email === gateway.email &&
-    password === gateway.password
+    email === gatewayEmail &&
+    password === gatewayPassword
 ) {
-
 
 const token =
     Math.random()
