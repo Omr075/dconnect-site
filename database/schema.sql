@@ -55,3 +55,19 @@ CREATE TABLE IF NOT EXISTS logs (
     provider TEXT,
     date TEXT NOT NULL
 );
+
+
+CREATE TABLE IF NOT EXISTS notifications (
+    id INTEGER PRIMARY KEY,
+    type TEXT NOT NULL,
+    category TEXT DEFAULT 'register',
+    source TEXT DEFAULT 'system',
+    target TEXT NOT NULL,
+    subject TEXT,
+    message TEXT NOT NULL,
+    status TEXT DEFAULT 'pending',
+    attempts INTEGER DEFAULT 0,
+    created_at TEXT,
+    sent_at TEXT,
+    failed_at TEXT
+);
