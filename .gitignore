@@ -10,6 +10,7 @@ config/providers.json
 database/*.json
 !database/automation.json
 database/*.db
+!database/mozapi.db
 database/*.db-*
 
 # Sessões e dados locais
@@ -19,3 +20,5 @@ database/admin_sessions.json
 .env
 .env.*
 !.env.example
+
+!database/mozapi.db
