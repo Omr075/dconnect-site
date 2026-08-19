@@ -1,0 +1,25 @@
+{
+  "providers": [
+    {
+      "name": "openrouter",
+      "enabled": true,
+      "priority": 1,
+      "apikey": "CHANGE_ME",
+      "model": "openai/gpt-4o-mini"
+    },
+    {
+      "name": "gemini",
+      "enabled": false,
+      "priority": 2,
+      "apikey": "",
+      "model": "gemini-2.5-flash"
+    },
+    {
+      "name": "grok",
+      "enabled": false,
+      "priority": 3,
+      "apikey": "",
+      "model": "grok-4"
+    }
+  ]
+}
