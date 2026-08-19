@@ -53,41 +53,49 @@ await response.json();
 
 if(!data.status){
 
-    sessionStorage.removeItem(
-    "admin_token"
+    console.error(
+        "Erro na autenticação administrativa:",
+        data.message
     );
 
+    document.body.classList.remove(
+        "admin-loading"
+    );
 
-    window.location.href =
-    "../login.html";
-
+    alert(
+        data.message ||
+        "Sessão administrativa inválida."
+    );
 
     return;
 
 }
 
 
-
 document.body.classList.remove(
-"admin-loading"
+    "admin-loading"
 );
-
 
 
 }
 catch(err){
 
-console.error(err);
+    console.error(
+        "Erro ao carregar automação:",
+        err
+    );
 
+    document.body.classList.remove(
+        "admin-loading"
+    );
 
-window.location.href =
-"../login.html";
+    alert(
+        "Não foi possível carregar os dados da automação."
+    );
 
-
-return;
+    return;
 
 }
-
 
 const automation =
 data.automation;
