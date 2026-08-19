@@ -8,6 +8,7 @@ database/mozapi.db-shm
 config/email.json
 config/providers.json
 database/*.json
+!database/automation.json
 database/*.db
 database/*.db-*
 

@@ -1,0 +1,311 @@
+{
+  "enabled": true,
+  "executions": 72,
+  "success": 67,
+  "failed": 5,
+  "lastExecution": "2026-08-19T09:57:06.237Z",
+  "lastEvent": "\nMozAPI: A sua palavra-passe foi redefinida com sucesso.\n\nData: 19/08/2026\nHora: 11:56\nDispositivo: Android\nLocalização: Não disponível\nIP: ::1\n\nSe não foi você quem realizou esta alteração, recomendamos que contacte imediatamente o suporte da MozAPI para proteger a sua conta.\n\nSuporte: https://mozapi.com/suporte.html\n",
+  "responseTime": 0,
+  "events": [
+    {
+      "title": "SMS enviado",
+      "message": "\nMozAPI: A sua palavra-passe foi redefinida com sucesso.\n\nData: 19/08/2026\nHora: 11:56\nDispositivo: Android\nLocalização: Não disponível\nIP: ::1\n\nSe não foi você quem realizou esta alteração, recomendamos que contacte imediatamente o suporte da MozAPI para proteger a sua conta.\n\nSuporte: https://mozapi.com/suporte.html\n",
+      "status": "success",
+      "createdAt": "2026-08-19T09:57:06.237Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "O seu código de recuperação da MOZAPI é: 205082\n\nEste código é válido por 60 segundos. Por motivos de segurança, não partilhe este código com ninguém.",
+      "status": "success",
+      "createdAt": "2026-08-19T09:56:35.339Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "\nOlá, DAÚDO!\n\nSeja muito bem-vindo à MOZAPI.\n\nA sua conta foi criada com sucesso e estamos felizes por tê-lo connosco. A partir de agora, terá acesso aos nossos serviços e funcionalidades.\n\nSe precisar de ajuda, informações adicionais ou suporte, a nossa equipa estará disponível para o ajudar.\n\nObrigado por escolher a MOZAPI.\nEstamos consigo em cada passo.\n",
+      "status": "success",
+      "createdAt": "2026-08-19T09:56:05.192Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Teste da fila SQLite da MozAPI.",
+      "status": "success",
+      "createdAt": "2026-08-19T09:42:36.094Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Olá José Paulo António Mualadashi, sejá bem-vindo à nossa comunidade MozApi, para mais informações entre em contacto com o suporte. Obrigado.",
+      "status": "success",
+      "createdAt": "2026-08-18T20:24:06.579Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "MozAPI: A sua palavra-passe foi redefinida com sucesso.\n\nData: 18/08/2026\nHora: 22:10\nDispositivo: Dispositivo desconhecido\nLocalização: Não disponível\nIP: ::1\n\nSe não foi você quem realizou esta alteração, contacte imediatamente o suporte da MozAPI. https;//mozapi.com/suporte.html",
+      "status": "success",
+      "createdAt": "2026-08-18T20:11:05.080Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "O seu código de recuperação da MozAPI é: 335122. O código é válido durante 60 segundos.",
+      "status": "success",
+      "createdAt": "2026-08-18T20:10:05.178Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "O seu código de recuperação da MozAPI é: 194138. O código é válido durante 60 segundos.",
+      "status": "success",
+      "createdAt": "2026-08-18T20:02:35.547Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "O seu código de recuperação da MozAPI é: 144042. O código é válido durante 60 segundos.",
+      "status": "success",
+      "createdAt": "2026-08-18T19:59:35.168Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "O seu código de recuperação da MozAPI é: 504422. O código é válido durante 60 segundos.",
+      "status": "success",
+      "createdAt": "2026-08-18T19:57:05.504Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "O seu código de recuperação da MozAPI é: 378544. O código é válido durante 60 segundos.",
+      "status": "success",
+      "createdAt": "2026-08-18T19:53:35.160Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "MozAPI: A sua palavra-passe foi redefinida com sucesso.\n\nData: 18/08/2026\nHora: 21:18\nDispositivo: Android\nLocalização: Não disponível\nIP: ::1\n\nSe não foi você quem realizou esta alteração, contacte imediatamente o suporte da MozAPI. https;//mozapi.com/suporte.html",
+      "status": "success",
+      "createdAt": "2026-08-18T19:18:36.759Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "O seu código de recuperação da MozAPI é: 778007. O código é válido durante 60 segundos.",
+      "status": "success",
+      "createdAt": "2026-08-18T19:18:05.148Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Olá Daúdo Omar, tudo bem?",
+      "status": "success",
+      "createdAt": "2026-08-18T19:14:05.329Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Olá Teste SQLite, sejá bem-vindo à nossa comunidade MozApi, para mais informações entre em contacto com o suporte. Obrigado.",
+      "status": "success",
+      "createdAt": "2026-08-18T19:13:35.139Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Você jovem.",
+      "status": "success",
+      "createdAt": "2026-08-18T19:13:06.161Z"
+    },
+    {
+      "title": "Falha no envio de SMS",
+      "message": "Você jovem.",
+      "status": "failed",
+      "createdAt": "2026-08-13T15:37:27.341Z"
+    },
+    {
+      "title": "Falha no envio de SMS",
+      "message": "Você jovem.",
+      "status": "failed",
+      "createdAt": "2026-08-13T15:37:22.340Z"
+    },
+    {
+      "title": "Falha no envio de SMS",
+      "message": "Você jovem.",
+      "status": "failed",
+      "createdAt": "2026-08-13T15:37:17.334Z"
+    },
+    {
+      "title": "Falha no envio de SMS",
+      "message": "Você jovem.",
+      "status": "failed",
+      "createdAt": "2026-08-13T15:37:12.489Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Olá Daúdo Omar, agora você está usando o plano Pro, com mais funcionalidades e funções mais avançadas só para você.",
+      "status": "success",
+      "createdAt": "2026-08-13T15:28:05.672Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "O seu código de recuperação da MozAPI é: 534389. O código é válido durante 60 segundos.",
+      "status": "success",
+      "createdAt": "2026-08-13T15:27:37.031Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Você jovem.",
+      "status": "success",
+      "createdAt": "2026-08-11T08:33:35.093Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Pt, vamos bazar bro. Mesmo esse negar.",
+      "status": "success",
+      "createdAt": "2026-08-11T08:32:35.223Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Olá Daúdo Omar, como você está?",
+      "status": "success",
+      "createdAt": "2026-08-11T08:31:35.118Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Olá Daúdo Omar, como você está?",
+      "status": "success",
+      "createdAt": "2026-08-11T08:31:05.322Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "MozAPI: A sua palavra-passe foi redefinida com sucesso.\n\nData: 10/08/2026\nHora: 19:07\nDispositivo: Android\nLocalização: Não disponível\nIP: ::1\n\nSe não foi você quem realizou esta alteração, contacte imediatamente o suporte da MozAPI.",
+      "status": "success",
+      "createdAt": "2026-08-10T17:07:35.756Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "O seu código de recuperação da MozAPI é: 532016. O código é válido durante 60 segundos.",
+      "status": "success",
+      "createdAt": "2026-08-10T17:07:05.648Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "O seu código de recuperação da MozAPI é: 267485. O código é válido durante 60 segundos.",
+      "status": "success",
+      "createdAt": "2026-08-10T17:03:36.435Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "O seu código de recuperação da MozAPI é: 162041. O código é válido durante 60 segundos.",
+      "status": "success",
+      "createdAt": "2026-08-10T17:01:35.255Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "O seu código de recuperação da MozAPI é: 289015. O código é válido durante 60 segundos.",
+      "status": "success",
+      "createdAt": "2026-08-10T17:00:05.794Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "O seu código de recuperação da MozAPI é: 607298. O código é válido durante 60 segundos.",
+      "status": "success",
+      "createdAt": "2026-08-10T16:39:36.341Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "O seu código de recuperação da MozAPI é: 313885. O código é válido durante 60 segundos.",
+      "status": "success",
+      "createdAt": "2026-08-10T16:38:35.429Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Jovem, estás onde agora?",
+      "status": "success",
+      "createdAt": "2026-08-10T12:05:35.730Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "O seu código de recuperação da MozAPI é: 399185. O código é válido durante 60 segundos.",
+      "status": "success",
+      "createdAt": "2026-08-10T12:01:36.607Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "O seu código de recuperação da MozAPI é: 699048. O código é válido durante 60 segundos.",
+      "status": "success",
+      "createdAt": "2026-08-10T12:01:08.060Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Olá Layerson, seu plano é Free.\nCriada em 8/6/2026, e tens um total de 0 requests",
+      "status": "success",
+      "createdAt": "2026-08-09T18:05:05.319Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Olá Daúdo Omar, seu plano é Free.\nCriada em 8/7/2026, e tens um total de 1 requests",
+      "status": "success",
+      "createdAt": "2026-08-09T18:04:35.122Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Olá Daúdo Omar, seu plano é Free.\nCriada em 8/8/2026, e tens um total de 0 requests",
+      "status": "success",
+      "createdAt": "2026-08-09T18:04:05.093Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Olá Daúdo Omar, seu plano é Free.\nCriada em 8/8/2026, e tens um total de 0 requests",
+      "status": "success",
+      "createdAt": "2026-08-09T18:03:35.115Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Olá Daúdo Omar, seu plano é Free.\nCriada em 8/7/2026, e tens um total de 1 requests",
+      "status": "success",
+      "createdAt": "2026-08-09T18:03:05.443Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Olá Daúdo Omar, seu plano é Free.\nCriada em 8/7/2026, e tens um total de request",
+      "status": "success",
+      "createdAt": "2026-08-09T18:00:07.912Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Daúdo Omar",
+      "status": "success",
+      "createdAt": "2026-08-09T14:27:05.379Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "kmkie?",
+      "status": "success",
+      "createdAt": "2026-08-09T14:15:35.217Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "O seu código de recuperação da MozAPI é: 670186. O código é válido durante 60 segundos.",
+      "status": "success",
+      "createdAt": "2026-08-09T14:11:05.511Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "O seu código de recuperação da MozAPI é: 346506. O código é válido durante 60 segundos.",
+      "status": "success",
+      "createdAt": "2026-08-09T14:10:05.520Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Olá Layerson, como estás?",
+      "status": "success",
+      "createdAt": "2026-08-09T11:32:35.059Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Olá Daúdo Omar, como estás?",
+      "status": "success",
+      "createdAt": "2026-08-09T11:32:05.067Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Olá Daúdo Omar, como estás?",
+      "status": "success",
+      "createdAt": "2026-08-09T11:31:35.217Z"
+    },
+    {
+      "title": "SMS enviado",
+      "message": "Localização?",
+      "status": "success",
+      "createdAt": "2026-08-09T11:29:05.205Z"
+    }
+  ]
+}
