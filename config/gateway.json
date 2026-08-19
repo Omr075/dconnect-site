@@ -1,0 +1,9 @@
+{
+  "id": "gateway-root",
+  "email": "mozapi@gmail.com",
+  "password": "root0011",
+  "enabled": true,
+  "delay": 600000,
+  "maxAttempts": 3,
+  "tokenTTL": 60000
+}

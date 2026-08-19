@@ -1,0 +1,20 @@
+node_modules/
+
+# Banco SQLite
+database/mozapi.db
+database/mozapi.db-wal
+database/mozapi.db-shm
+
+config/email.json
+config/providers.json
+database/*.json
+database/*.db
+database/*.db-*
+
+# Sessões e dados locais
+database/admin_sessions.json
+
+# Configurações/segredos locais
+.env
+.env.*
+!.env.example

@@ -1,0 +1,1097 @@
+/*==================================================
+ MOZAI CHAT
+ Desenvolvido para MOZAPI
+==================================================*/
+
+
+:root{
+
+    /* Fundo */
+
+    --bg:#050505;
+
+    /* Superfícies */
+
+    --surface:#101010;
+    --surface-hover:#151515;
+
+    /* Bordas */
+
+    --border:#242424;
+
+    /* Textos */
+
+    --text:#ffffff;
+
+    --secondary:#9CA3AF;
+
+    /* Destaque */
+
+    --accent:#64748B;
+
+    --accent-soft:rgba(100,116,139,.12);
+
+    /* Estados */
+
+    --success:#22c55e;
+
+    --warning:#f59e0b;
+
+    --danger:#ef4444;
+
+    --info:#38bdf8;
+
+    /* Layout */
+
+    --radius:22px;
+
+    --radius-sm:16px;
+
+    --transition:.25s ease;
+
+}
+
+
+/*==================================================
+ RESET
+==================================================*/
+
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+    min-height:100vh;
+
+}
+
+
+
+/*==================================================
+ LINKS
+==================================================*/
+
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+
+
+/*==================================================
+ CHAT
+==================================================*/
+
+
+.chat-container{
+
+    width:min(980px,95%);
+
+    height:92vh;
+
+    margin:25px auto;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.35);
+
+}
+
+
+
+/*==================================================
+ HEADER
+==================================================*/
+
+
+.chat-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 22px;
+
+    border-bottom:1px solid var(--border);
+
+    background:rgba(255,255,255,.01);
+
+    backdrop-filter:blur(14px);
+
+}
+
+
+
+/*==================================================
+ LOGO
+==================================================*/
+
+
+.chat-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.chat-logo svg{
+
+    width:22px;
+
+    height:22px;
+
+}
+
+
+.chat-logo span{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    letter-spacing:-.3px;
+
+}
+
+
+
+/*==================================================
+ STATUS
+==================================================*/
+
+
+.status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--secondary);
+
+    font-size:14px;
+
+}
+
+
+.status::before{
+
+    content:"";
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:var(--success);
+
+    box-shadow:
+
+    0 0 12px var(--success);
+
+}
+
+
+
+/*==================================================
+ ÁREA DAS MENSAGENS
+==================================================*/
+
+
+.messages{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    padding:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+/* Scrollbar */
+
+
+.messages::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+
+.messages::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+
+.messages::-webkit-scrollbar-thumb{
+
+    background:var(--border);
+
+    border-radius:999px;
+
+}
+
+
+.messages::-webkit-scrollbar-thumb:hover{
+
+    background:#3a3a3a;
+
+}
+
+
+
+/*==================================================
+ ANIMAÇÃO
+==================================================*/
+
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*==================================================
+ MENSAGEM
+==================================================*/
+
+.message{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    gap:14px;
+
+    animation:fadeIn .25s ease;
+
+}
+
+
+.message.user{
+
+    flex-direction:row-reverse;
+
+}
+
+
+
+/*==================================================
+ AVATAR
+==================================================*/
+
+.avatar{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    color:var(--secondary);
+
+}
+
+
+.avatar svg{
+
+    width:22px;
+
+    height:22px;
+
+}
+
+
+
+/*==================================================
+ CONTEÚDO
+==================================================*/
+
+.message-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    max-width:78%;
+
+}
+
+
+
+/*==================================================
+ BALÃO
+==================================================*/
+
+.bubble{
+
+    position:relative;
+
+    background:var(--bg);
+
+    border:1px solid var(--border);
+
+    border-radius:28px;
+
+    padding:18px 22px;
+
+    color:var(--text);
+
+    line-height:1.75;
+
+    word-break:break-word;
+
+    transition:var(--transition);
+
+}
+
+
+.message.user .bubble{
+
+    background:var(--accent-soft);
+
+}
+
+
+.bubble:hover{
+
+    border-color:#3a3a3a;
+
+}
+
+
+
+/*==================================================
+ HORA
+==================================================*/
+
+.message-time{
+
+    padding:0 10px;
+
+    color:#6b7280;
+
+    font-size:12px;
+
+}
+
+
+
+/*==================================================
+ BOTÃO COPIAR
+==================================================*/
+
+.copy-message{
+
+    position:absolute;
+
+    top:12px;
+
+    right:12px;
+
+    opacity:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:30px;
+
+    height:30px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+    color:var(--secondary);
+
+}
+
+
+.bubble:hover .copy-message{
+
+    opacity:1;
+
+}
+
+
+.copy-message:hover{
+
+    background:rgba(255,255,255,.05);
+
+    color:white;
+
+}
+
+
+
+/*==================================================
+ LINKS
+==================================================*/
+
+.bubble a{
+
+    color:var(--info);
+
+    text-decoration:none;
+
+}
+
+
+.bubble a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+
+/*==================================================
+ TÍTULOS
+==================================================*/
+
+.bubble h1{
+
+    font-size:26px;
+
+    margin-bottom:16px;
+
+}
+
+
+.bubble h2{
+
+    font-size:22px;
+
+    margin-bottom:14px;
+
+}
+
+
+.bubble h3{
+
+    font-size:18px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+/*==================================================
+ PARÁGRAFOS
+==================================================*/
+
+.bubble p{
+
+    margin-bottom:12px;
+
+}
+
+
+.bubble p:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+
+/*==================================================
+ LISTAS
+==================================================*/
+
+.bubble ul,
+
+.bubble ol{
+
+    margin-left:24px;
+
+    margin-bottom:14px;
+
+}
+
+
+.bubble li{
+
+    margin-bottom:8px;
+
+}
+
+
+
+/*==================================================
+ TABELAS
+==================================================*/
+
+.bubble table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:18px;
+
+}
+
+
+.bubble th,
+
+.bubble td{
+
+    border:1px solid var(--border);
+
+    padding:12px;
+
+}
+
+
+.bubble th{
+
+    background:rgba(255,255,255,.03);
+
+}
+
+
+
+/*==================================================
+ BLOCO DE CÓDIGO
+==================================================*/
+
+.bubble pre{
+
+    margin-top:18px;
+
+    overflow:auto;
+
+    border-radius:18px;
+
+    background:#080808;
+
+    border:1px solid var(--border);
+
+    padding:18px;
+
+}
+
+
+.bubble pre code{
+
+    font-family:
+
+    Consolas,
+
+    monospace;
+
+    color:#e5e7eb;
+
+}
+
+
+
+/*==================================================
+ CÓDIGO INLINE
+==================================================*/
+
+.bubble code{
+
+    background:rgba(255,255,255,.05);
+
+    padding:2px 6px;
+
+    border-radius:8px;
+
+}
+
+
+
+/*==================================================
+ SCROLL DO CÓDIGO
+==================================================*/
+
+.bubble pre::-webkit-scrollbar{
+
+    height:7px;
+
+}
+
+
+.bubble pre::-webkit-scrollbar-thumb{
+
+    background:#303030;
+
+    border-radius:999px;
+
+}
+
+
+
+/*==================================================
+ IMAGENS
+==================================================*/
+
+.bubble img{
+
+    max-width:100%;
+
+    border-radius:16px;
+
+    margin-top:14px;
+
+}
+
+/*==================================================
+ CAIXA DE ENVIO
+==================================================*/
+
+.chat-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:18px;
+
+    border-top:1px solid var(--border);
+
+    background:var(--surface);
+
+}
+
+
+#chat{
+
+    flex:1;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    border:1px solid var(--border);
+
+    border-radius:999px;
+
+    padding:16px 22px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:var(--transition);
+
+}
+
+
+#chat::placeholder{
+
+    color:#6b7280;
+
+}
+
+
+#chat:focus{
+
+    border-color:var(--accent);
+
+    box-shadow:
+
+    0 0 0 3px rgba(100,116,139,.12);
+
+}
+
+
+
+/*==================================================
+ BOTÃO ENVIAR
+==================================================*/
+
+.chat-box button{
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    color:#000;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+
+.chat-box button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+.chat-box button:active{
+
+    transform:scale(.96);
+
+}
+
+
+.chat-box button svg{
+
+    width:20px;
+
+    height:20px;
+
+}
+
+
+
+/*==================================================
+ ESTADO DESATIVADO
+==================================================*/
+
+.chat-box button:disabled{
+
+    opacity:.5;
+
+    cursor:not-allowed;
+
+}
+
+
+
+/*==================================================
+ TYPING INDICATOR
+==================================================*/
+
+.typing{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.typing .bubble{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:16px 18px;
+
+}
+
+
+.typing span{
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+
+    animation:typing 1.2s infinite;
+
+}
+
+
+.typing span:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+
+.typing span:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+
+@keyframes typing{
+
+    0%{
+
+        opacity:.25;
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:translateY(-4px);
+
+    }
+
+    100%{
+
+        opacity:.25;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/*==================================================
+ SELEÇÃO
+==================================================*/
+
+::selection{
+
+    background:rgba(100,116,139,.25);
+
+}
+
+
+
+/*==================================================
+ TRANSIÇÕES
+==================================================*/
+
+svg{
+
+    transition:var(--transition);
+
+}
+
+
+button:hover svg{
+
+    transform:translateX(2px);
+
+}
+
+
+
+/*==================================================
+ RESPONSIVO
+==================================================*/
+
+@media(max-width:768px){
+
+.chat-container{
+
+    width:100%;
+
+    height:100vh;
+
+    margin:0;
+
+    border-radius:0;
+
+}
+
+
+.chat-header{
+
+    padding:16px;
+
+}
+
+
+.messages{
+
+    padding:18px;
+
+    gap:22px;
+
+}
+
+
+.message-content{
+
+    max-width:88%;
+
+}
+
+
+.avatar{
+
+    width:34px;
+
+    height:34px;
+
+}
+
+
+.avatar svg{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+
+.bubble{
+
+    padding:16px 18px;
+
+    border-radius:22px;
+
+}
+
+
+.chat-box{
+
+    padding:14px;
+
+}
+
+
+.chat-box button{
+
+    width:46px;
+
+    height:46px;
+
+}
+
+}
+
+
+
+/*==================================================
+ PEQUENAS ANIMAÇÕES
+==================================================*/
+
+.bubble{
+
+    animation:fadeIn .25s ease;
+
+}
+
+
+.chat-box button:hover{
+
+    box-shadow:
+
+    0 0 18px rgba(255,255,255,.08);
+
+}
+
+
+.avatar:hover{
+
+    transform:rotate(8deg);
+
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Revisões | mozapi Administração</title>
+
+<link rel="stylesheet"
+href="css/admin.css">
+
+</head>
+
+
+<body>
+
+
+<div class="layout">
+
+
+<aside class="sidebar">
+
+
+<div class="admin-logo">
+Moz<span>API</span>
+</div>
+
+
+<nav>
+
+<a href="dashboard.html">
+Dashboard
+</a>
+
+
+<a href="users.html">
+Utilizadores
+</a>
+
+
+<a class="active"
+href="reviews.html">
+
+Revisões
+
+</a>
+
+
+
+<a href="automation.html">
+    Automação
+</a>
+
+<a href="logs.html">
+Logs
+</a>
+
+
+<a href="apis.html">
+APIs
+</a>
+
+
+<a href="settings.html">
+Configurações
+</a>
+
+
+</nav>
+
+
+<button id="logoutAdmin">
+
+Sair
+
+</button>
+
+
+</aside>
+
+
+
+
+<main class="main">
+
+
+<header class="topbar">
+
+<div>
+
+<h2>
+
+Pedidos de revisão
+
+</h2>
+
+
+<p class="subtitle">
+
+Analisar pedidos enviados por utilizadores suspensos
+
+</p>
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+<section class="panel">
+
+
+<div class="table-wrapper">
+
+
+<table class="users-table">
+
+
+<thead>
+
+
+<tr>
+
+<th>Email</th>
+
+<th>Mensagem</th>
+
+<th>Estado</th>
+
+<th>Data</th>
+
+<th>Ações</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+<tbody id="reviewsTable">
+
+
+</tbody>
+
+
+
+</table>
+
+
+</div>
+
+
+</section>
+
+
+
+</main>
+
+
+</div>
+
+
+
+
+<!-- MODAL CONFIRMAÇÃO -->
+
+
+<div id="confirmModal" class="modal">
+
+
+<div class="modal-card">
+
+
+<h3 id="modalTitle">
+
+Confirmar ação
+
+</h3>
+
+
+<p id="modalMessage">
+
+Tem a certeza?
+
+</p>
+
+
+
+<div class="modal-actions">
+
+
+<button id="cancelModal">
+
+Cancelar
+
+</button>
+
+
+<button
+id="confirmModalBtn"
+class="danger">
+
+Confirmar
+
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+<script src="js/reviews.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "mozapi.com",
+  "version": "1.0.0",
+  "description": "Site Inicial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Omr075/dconnect-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Omr075/dconnect-site/issues"
+  },
+  "homepage": "https://github.com/Omr075/dconnect-site#readme",
+  "dependencies": {
+    "@napi-rs/canvas": "^1.0.2",
+    "axios": "^1.18.0",
+    "better-sqlite3": "^13.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "google-auth-library": "^11.0.0",
+    "puppeteer-core": "^25.3.0",
+    "resend": "^6.18.1"
+  }
+}

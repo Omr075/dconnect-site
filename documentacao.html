@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Daúdo Omar">
+  <meta name="description" content="Documentação mozapi">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>mozapi/ocumentação</title>
+
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<a href="index.html">
+  <div class="logo"></div>
+</a>
+
+<div class="container">
+
+  <br><br><br>
+
+  <h1>Documentação</h1>
+
+  <p class="slogan">
+    Guia oficial para utilização das nossas APIs.
+  </p>
+
+  <div class="card">
+    <h3>Autenticação</h3>
+
+    <p class="slogan">
+      Todas as requests devem incluir uma API Key válida.
+    </p>
+
+<pre>
+Authorization: Bearer SUA_API_KEY
+</pre>
+
+  </div>
+
+  <div class="card">
+    <h3>Endpoint Base</h3>
+
+<pre>
+https://api.mozapi.com
+</pre>
+
+  </div>
+
+  <div class="card">
+    <h3>Exemplo de Request</h3>
+
+<pre>
+fetch("https://api.mozapi.com/ping", {
+  headers: {
+    Authorization: "Bearer SUA_API_KEY"
+  }
+})
+.then(res => res.json())
+.then(console.log)
+</pre>
+
+  </div>
+
+  <div class="card">
+    <h3>Endpoints e APIs Disponíveis</h3>
+
+<p class="slogan">
+As APIs disponíveis serão adicionadas e atualizadas regularmente.
+</p>
+  </div>
+
+</div>
+
+</body>
+</html>

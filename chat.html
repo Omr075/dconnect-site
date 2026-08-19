@@ -1,0 +1,126 @@
+	<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="author" content="Daúdo Omar">
+
+    <meta name="description" content="Converse com a nossa IA">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="keywords" content="api, ia, mozapi">
+
+    <title>MozAI Chat</title>
+
+    <link rel="stylesheet" href="css/chat.css">
+
+</head>
+
+<body>
+
+<div class="chat-container">
+
+    <div class="chat-header">
+
+        <div class="chat-logo">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="20"
+                 height="20"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2">
+
+                <path d="M12 2v4"/>
+                <path d="M12 18v4"/>
+                <path d="M4.93 4.93l2.83 2.83"/>
+                <path d="M16.24 16.24l2.83 2.83"/>
+                <circle cx="12" cy="12" r="5"/>
+
+            </svg>
+
+            <span>MozAI Chat</span>
+
+        </div>
+
+        <span class="status">
+
+            ● Online
+
+        </span>
+
+    </div>
+
+
+
+    <div id="messages" class="messages">
+
+        <div class="message ai">
+
+            <div class="avatar">
+
+                AI
+
+            </div>
+
+            <div class="bubble">
+
+                <p>Olá 👋</p>
+
+                <p>Sou a inteligência artificial da MozAPI.</p>
+
+                <p>Pergunte qualquer coisa.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <form id="chatForm" class="chat-box">
+
+        <input
+
+            id="chat"
+
+            type="text"
+
+            autocomplete="off"
+
+            placeholder="Pergunte qualquer coisa..."
+
+        >
+
+        <button type="submit">
+
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 24 24">
+
+                <path d="M2 21L23 12 2 3v7l15 2-15 2z"/>
+
+            </svg>
+
+        </button>
+
+    </form>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<script src="js/loading-chat.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Daúdo Omar">
+    <meta name="description" content="Configurações da conta mozapi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>mozapi/configuracoes</title>
+
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<a href="dashboard.html">
+    <div class="logo"></div>
+</a>
+
+<div class="container">
+
+    <br><br><br>
+
+    <h1>Definições</h1>
+
+    <p class="slogan">
+        Gerencie a segurança da tua conta.
+    </p>
+
+
+    <div class="card">
+
+        <h3>Dados da Conta</h3>
+
+        <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name">
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email">
+        </div>
+
+        <button id="saveProfile">
+            Guardar Alterações
+        </button>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Segurança</h3>
+
+        <div class="form-group">
+            <label for="newPassword">Nova senha</label>
+            <input
+                type="password"
+                id="newPassword"
+                placeholder="Digite uma nova senha"
+            >
+        </div>
+
+        <button id="changePassword">
+            Alterar Senha
+        </button>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Sessão</h3>
+
+        <button id="logout">
+            Terminar Sessão
+        </button>
+
+    </div>
+
+</div>
+
+<script src="js/settings.js"></script>
+
+</body>
+</html>

@@ -1,38 +1,255 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="pt">
-<meta name="author" content="Daúdo Omar">
-    <meta name="description" content="melhor site de APIs e bots em Moçambique">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="api, site, programação">
-    <title>mozapi.com/login</title>
-    <link rel="stylesheet" href="css/estilo.css">
-  </head>
-  <body>
-    <h3>Faça login na sua conta</h3>
-    <form id="login">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Daúdo Omar">
+  <meta name="description" content="Login para mozapi.com">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="api, login, mozapi">
 
-    <input
-        type="email"
-        id="email"
-        placeholder="Seu Email"
-        required
-    >
+  <title>mozapi/login</title>
 
-    <input
-        type="password"
-        id="password"
-        placeholder="Sua senha"
-        required
-    >
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
 
-    <button type="submit">
-        Entrar
+<body>
+
+
+    <a href="index.html" class="nav-brand">
+
+        <img
+        src="assets/img/logo.jpeg"
+        alt="MozAPI Logo">
+
+    </a>
+
+  <div class="container">
+
+    <br><br><br>
+
+    <h3>Entrar na sua conta</h3>
+
+    <p class="slogan">
+      Acesse ao dashboard e gerencie suas APIs
+    </p>
+
+    <div class="card">
+
+      <form id="login">
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Digite seu email"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Digite sua senha"
+            required
+          >
+        </div>
+<br>
+        <button type="submit">
+          Entrar
+        </button>
+
+
+
+      </form>
+
+<br>
+<div class="google-divider">
+  <span>ou</span>
+</div>
+
+<div id="googleSignIn"></div>
+
+
+    </div>
+
+    <p class="slogan">
+      Ainda não tens conta?
+      <a id="branco" href="cadastro.html">Criar conta</a>
+    </p>
+
+
+    <p class="slogan">
+      Esqueceu a sua senha?
+      <a id="branco" href="recuperar.html">Recuperar conta</a>
+    </p>
+  </div>
+
+
+
+<!-- MODAL CONTA SUSPENSA -->
+
+<div id="suspendedModal" class="modal">
+
+    <div class="modal-card">
+
+        <h3>
+            Conta suspensa
+        </h3>
+
+        <p id="suspendedMessage">
+
+            A sua conta encontra-se suspensa.
+
+        </p>
+
+        <div class="info-box">
+
+            <div class="info-item">
+
+                <span>
+                    Motivo
+                </span>
+
+                <strong id="suspendedReason">
+
+                    Não informado
+
+                </strong>
+
+            </div>
+
+            <div class="info-item">
+
+                <span>
+                    Reabertura
+                </span>
+
+                <strong id="suspendedUntil">
+
+                    Permanente
+
+                </strong>
+
+            </div>
+
+        </div>
+
+<div id="reviewForm" class="review-form" style="display:none;">
+
+
+    <h4>
+        Pedido de revisão
+    </h4>
+
+
+    <p>
+
+        Explique o motivo pelo qual acredita que a suspensão deve ser revista.
+
+    </p>
+
+
+<textarea
+id="reviewMessage"
+maxlength="70"
+placeholder="Escreva a sua mensagem (máx. 70 caracteres)..."
+></textarea>
+
+<small id="reviewCount">
+    0/70
+</small>
+
+
+    <div class="modal-actions">
+
+
+        <button id="cancelReview">
+
+            Cancelar
+
+        </button>
+
+
+
+        <button id="sendReview">
+
+            Enviar pedido
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
+<div class="modal-actions" id="suspendedActions">
+
+    <button id="closeSuspendedModal">
+
+        Fechar
+
     </button>
 
-</form>
 
+    <button id="requestReview">
+
+        Pedir revisão
+
+    </button>
+
+
+    <button
+    id="contactSupport"
+    class="danger">
+
+        Contactar suporte
+
+    </button>
+
+</div>
+
+
+    </div>
+
+</div>
+
+
+<!-- MODAL ALERTA -->
+
+<div id="alertModal" class="modal">
+
+    <div class="modal-card">
+
+        <h3 id="alertTitle">
+            Aviso
+        </h3>
+
+
+        <p id="alertMessage">
+            Mensagem
+        </p>
+
+
+        <div class="modal-actions">
+
+            <button id="closeAlertModal">
+                Fechar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="js/login.js"></script>
-  </body>
-  </html>
+
+</body>
+</html>

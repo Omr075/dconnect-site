@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="author" content="Daúdo Omar">
+
+    <meta name="description" content="Melhor site de APIs e bots em Moçambique">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="keywords" content="api, bots, programação, mozapi">
+
+    <title>mozapi/playground/testar-api</title>
+
+
+    <link rel="stylesheet" href="css/playground.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+<h2 class="page-title">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml-icon lucide-code-xml"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+        Play<span>ground</span>
+    </h2>
+
+
+    <p class="page-subtitle">
+        Teste qualquer um dos nossos <span><a href="apis.html">endpoints</a></span> em segundos e em um só lugar.
+    </p>
+
+
+
+    <div class="playground">
+
+
+
+        <!-- PAINEL DE CONTROLO -->
+
+        <div class="card">
+
+
+            <h4 class="t0">
+                Interface de Verificação de Endpoints
+            </h4>
+
+
+
+            <label for="endpoint">
+                Endpoint
+            </label>
+
+
+            <select id="endpoint">
+
+                <option disabled selected>
+                    Selecione um endpoint
+                </option>
+
+                <option>/api/ai/chat</option>
+
+                <option>/api/music/search</option>
+
+                <option>/api/lyrics</option>
+
+                <option>/api/video</option>
+
+                <option>/api/music/song</option>
+
+            </select>
+
+
+
+
+            <label for="query">
+                Prompt
+            </label>
+
+
+
+            <input
+                type="text"
+                id="query"
+                placeholder="Ex: O que é a MOZAPI?"
+            >
+
+
+
+
+            <div class="buttons">
+
+                <button id="testApi">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flask-conical-icon lucide-flask-conical"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"/><path d="M6.453 15h11.094"/><path d="M8.5 2h7"/></svg>    
+<b>	        Testar Endpoint</b>
+                </button>
+
+
+
+
+
+                <button id="clearTerminal">
+ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brush-cleaning-icon lucide-brush-cleaning"><path d="m16 22-1-4"/><path d="M19 14a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2h-3a1 1 0 0 1-1-1V4a2 2 0 0 0-4 0v5a1 1 0 0 1-1 1H6a2 2 0 0 0-2 2v1a1 1 0 0 0 1 1"/><path d="M19 14H5l-1.973 6.767A1 1 0 0 0 4 22h16a1 1 0 0 0 .973-1.233z"/><path d="m8 22 1-4"/></svg>
+
+                    Limpar
+                </button>
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+        <!-- TERMINAL -->
+
+
+        <div class="card terminal-card">
+
+
+            <div class="terminal-top">
+
+
+                <span class="terminal-dot red"></span>
+
+                <span class="terminal-dot yellow"></span>
+
+                <span class="terminal-dot green"></span>
+
+
+
+                <span class="terminal-name">
+
+
+                    <svg 
+                    class="svg"
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    stroke-width="2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round">
+
+                        <path d="M12 19h8"/>
+
+                        <path d="m4 17 6-6-6-6"/>
+
+                    </svg>
+
+
+                </span>
+
+
+
+            </div>
+
+
+
+
+            <pre id="result">
+
+Terminal v1.0
+> Aguardando requisição...
+
+            </pre>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+</div>
+
+
+
+
+<a id="voltar" href="dashboard.html">
+
+    Voltar ao Dashboard
+
+</a>
+
+
+
+
+<script src="js/playground.js"></script>
+
+
+</body>
+
+</html>

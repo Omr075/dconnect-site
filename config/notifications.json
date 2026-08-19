@@ -1,0 +1,11 @@
+{
+  "register": {
+    "email": true,
+    "sms": true
+  },
+
+  "macrodroid": {
+    "enabled": true,
+    "key": "CHANGE_ME"
+  }
+}

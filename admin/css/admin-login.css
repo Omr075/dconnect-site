@@ -1,0 +1,219 @@
+:root {
+
+    --bg:#050505;
+    --surface:#101010;
+    --border:#242424;
+
+    --text:#ffffff;
+    --secondary:#9CA3AF;
+
+    --accent:#64748B;
+
+}
+
+
+* {
+    
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body {
+
+    margin:0;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+
+
+
+
+.container{
+
+    width:min(900px,90%);
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+/* Área principal */
+
+.admin-login {
+
+    width:100%;
+
+    max-width:460px;
+
+    padding:40px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+}
+
+
+/* Título */
+
+
+.admin-login h2 {
+
+    font-size:28px;
+
+    margin-bottom:8px;
+
+}
+
+
+.admin-login p {
+
+    color:var(--secondary);
+
+    margin-bottom:30px;
+
+
+}
+
+
+/* Campos */
+
+label {
+
+    display:block;
+
+    color:var(--secondary);
+
+    margin-bottom:8px;
+
+}
+
+
+input {
+
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:20px;
+
+    background:#050505;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+
+input:focus {
+
+    outline:none;
+
+    border-color:var(--accent);
+
+}
+
+
+/* Botão */
+
+button {
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#ffffff;
+
+    color:#050505;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+button:hover {
+
+    opacity:.85;
+
+    transform:translateY(-2px);
+
+}
+
+
+.card {
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:20px;
+
+}
+
+
+
+.card {
+
+    transition:.3s;
+
+}
+
+
+.card:hover {
+
+    transform:translateY(-3px);
+
+}
+
+h3 {
+   text-align: center;
+}
+
+
+
+p {
+   text-align: center;
+}
+
+span {
+color: var(--accent);
+}
+
+svg {
+    width:18px;
+    height:18px;
+    flex-shrink:0;
+}

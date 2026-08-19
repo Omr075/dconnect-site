@@ -1,67 +1,394 @@
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
-    <meta name="author" content="Daúdo Omar">
-    <meta name="description" content="melhor site de APIs e bots em Moçambique">
-    <meta sharset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width",initial-scale='1.0'>
-    <meta name="keywords" content="api, site, programação">
-    <title>mozapi.com/cadastro</title>
-    <link rel="stylesheet" href="css/estilo.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Daúdo Omar">
+  <meta name="description" content="Criar conta mozapi">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="api, cadastro, mozapi">
 
-  </head>
-  <body>
-<<<<<<< HEAD
+  <title>mozapi/cadastro</title>
 
-=======
-   
->>>>>>> 3171a90 (Via github)
-    <form id="cadastro">
-    <label class="label" for="nome">Nome:</label>
-    <input
-        class="fundo"
-        type="text"
-        id="nome"
-        placeholder="Nome Completo"
-        required
-    >
-    <br>
-    <label for="email">E-mail:</label>
-    <input
-        type="email"
-        id="email"
-        placeholder="Digite o seu Email"
-        required
-    >
-    <br>
-    <label for="password">Senha:</label>
-    <input
-        type="password"
-        id="password"
-        placeholder="Senha"
-        required
-    >
-  <br>
-    <label style="margin-left:8px"  for="confirmPassword">Confirme:</label>
-    <input
-        type="password"
-        id="confirmPassword"
-        placeholder="Confirmar sua Senha"
-        required
-    >
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
 
-    <button type="submit">
-        Criar Conta
-    </button>
-</form >
-<br><br>
-<br><br>
-    <a style="margin-left:30%" href="index.html">Voltar para pagina inicial</a>
-         <script src="../js/script.js"></script>
-  </body>
-<<<<<<< HEAD
+<body>
+
+
+    <a href="index.html" class="nav-brand">
+
+        <img
+        src="assets/img/logo.jpeg"
+        alt="MozAPI Logo">
+
+    </a>
+  <div class="container">
+
+    <br><br><br>
+
+    <h3>Criar conta</h3>
+
+    <p class="slogan">
+      Ao criar uma conta, você poderá gerir as suas chaves API, acompanhar o consumo, testar endpoints e aceder a recursos exclusivos.
+    </p>
+
+    <div class="card">
+
+      <form id="cadastro">
+
+        <div class="form-group">
+          <label for="nome">Nome completo</label>
+
+          <input
+            autocomplete="name"
+            type="text"
+            id="nome"
+            placeholder="Digite seu nome"
+            required>
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="phone">
+            Número
+          </label>
+          <p class="terms-note">
+            Ao adicionar o número de celular, você receberá as mudanças da conta directamente no seu número.
+          </p>
+          <div class="phone-group">
+
+            <select
+              id="phoneCode"
+              aria-label="Código internacional">
+
+              <option value="+258" selected>
+                🇲🇿 +258
+              </option>
+
+              <option value="+244">
+                🇦🇴 +244
+              </option>
+
+              <option value="+27">
+                🇿🇦 +27
+              </option>
+
+              <option value="+263">
+                🇿🇼 +263
+              </option>
+
+              <option value="+255">
+                🇹🇿 +255
+              </option>
+
+              <option value="+260">
+                🇿🇲 +260
+              </option>
+
+              <option value="+265">
+                🇲🇼 +265
+              </option>
+
+              <option value="+254">
+                🇰🇪 +254
+              </option>
+
+              <option value="+234">
+                🇳🇬 +234
+              </option>
+
+              <option value="+1">
+                🇺🇸 +1
+              </option>
+
+              <option value="+351">
+                🇵🇹 +351
+              </option>
+
+              <option value="+44">
+                🇬🇧 +44
+              </option>
+
+              <option value="+33">
+                🇫🇷 +33
+              </option>
+
+              <option value="+49">
+                🇩🇪 +49
+              </option>
+
+              <option value="+34">
+                🇪🇸 +34
+              </option>
+
+              <option value="+39">
+                🇮🇹 +39
+              </option>
+
+              <option value="+91">
+                🇮🇳 +91
+              </option>
+
+              <option value="+86">
+                🇨🇳 +86
+              </option>
+
+            </select>
+
+
+            <input
+              type="tel"
+              id="phone"
+              autocomplete="tel-national"
+              inputmode="numeric"
+              placeholder="Número de telefone (Opcional)">
+
+          </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="emails">
+            E-mail
+          </label>
+
+          <input
+            type="email"
+            id="emails"
+            placeholder="Digite seu email"
+            required>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="password">
+            Senha
+          </label>
+
+          <input
+            autocomplete="new-password"
+            type="password"
+            id="password"
+            placeholder="Crie uma senha"
+            required>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="confirmPassword">
+            Confirmar senha
+          </label>
+
+          <input
+            autocomplete="new-password"
+            type="password"
+            id="confirmPassword"
+            placeholder="Repita a senha"
+            required>
+
+        </div>
+
+
+        <div class="terms-group">
+
+          <label class="terms-label">
+
+            <input
+              type="checkbox"
+              id="terms"
+              >
+
+            <span>
+              Li e concordo com os
+              <a href="termos.html">
+                Termos de Utilização
+              </a>
+              da MozAPI.
+            </span>
+
+          </label>
+
+          <p class="terms-note">
+            Ao criar a conta, você confirma que leu e aceita as condições de utilização da plataforma.
+          </p>
+
+        </div>
+
+
+        <button type="submit">
+          Criar conta
+        </button>
+
+      </form>
+
+<br>
+      <div class="google-divider">
+        <span>ou</span>
+      </div>
+
+
+      <div id="googleSignUp"></div>
+
+    </div>
+
+
+    <p class="slogan">
+
+      Já tem conta?
+
+      <a
+        id="branco"
+        class="branco"
+        href="login.html">
+
+        Fazer login
+
+      </a>
+
+    </p>
+
+
+<!-- MODAL ALERTA -->
+
+<div id="alertModal" class="modal">
+
+    <div class="modal-card">
+
+        <h3 id="alertTitle">
+            Aviso
+        </h3>
+
+        <p id="alertMessage">
+            Mensagem
+        </p>
+
+        <div class="modal-actions">
+
+            <button id="closeAlertModal">
+                Fechar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+  </div>
+
+
+  <script
+    src="https://accounts.google.com/gsi/client"
+    async
+    defer>
+  </script>
+
+  <script src="js/script.js"></script>
+
+</body>
 </html>
-=======
-  </html>
->>>>>>> 3171a90 (Via github)
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Daúdo Omar">
+  <meta name="description" content="Criar conta mozapi">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="api, cadastro, mozapi">
+
+  <title>mozapi/cadastro</title>
+
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+  <a href="index.html">
+    <div class="logo"></div>
+  </a>
+
+  <div class="container">
+
+    <br><br><br>
+
+    <h3>Criar conta</h3>
+
+    <p class="slogan">
+      Ao criar uma conta, você poderá gerir as suas chaves API, acompanhar o consumo, testar endpoints e aceder a recursos exclusivos.
+    </p>
+
+    <div class="card">
+
+      <form id="cadastro">
+
+<div class="form-group">
+  <label for="nome">Nome completo</label>
+  <input autocomplete="name" type="text" id="nome" placeholder="Digite seu nome" required>
+</div>
+
+
+<div class="form-group">
+  <label for="phone">Número</label>
+<input 
+type="tel"
+id="phone"
+placeholder="Número de telefone (Opcional)">
+</div>
+
+
+<div class="form-group">
+  <label for="emails">E-mail</label>
+  <input type="email" id="emails" placeholder="Digite seu email" required>
+</div>
+
+<div class="form-group">
+  <label for="password">Senha</label>
+  <input autocomplete="new-password" type="password" id="password" placeholder="Crie uma senha" required>
+</div>
+
+<div class="form-group">
+  <label for="confirmPassword">Confirmar senha</label>
+  <input autocomplete="new-password" type="password" id="confirmPassword" placeholder="Repita a senha" required>
+</div>
+
+<button type="submit">Criar conta</button>
+
+      </form>
+
+<div class="google-divider">
+    <span>ou</span>
+</div>
+
+<div id="googleSignUp"></div>
+
+    </div>
+
+    <p class="slogan">
+      Já tem conta?
+      <a class="branco" href="login.html">Fazer login</a>
+    </p>
+
+  </div>
+
+
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
+-->

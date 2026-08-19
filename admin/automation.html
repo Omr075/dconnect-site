@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MozAPI Admin — Automação</title>
+
+<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/automation.css">
+
+</head>
+
+
+<body class="admin-loading">
+
+<div class="layout">
+
+
+<!-- PERFIL ADMIN -->
+
+<div class="admin-profile">
+
+    <div class="avatar">
+        A
+    </div>
+
+    <div>
+
+        <strong id="adminName">
+            Administrador
+        </strong>
+
+        <p>
+            Root Access
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+
+    <div class="admin-logo">
+        Moz<span>API</span>
+    </div>
+
+
+    <nav>
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+
+        <a href="users.html">
+            Utilizadores
+        </a>
+
+
+        <a href="reviews.html">
+            Revisões
+        </a>
+
+<a href="automation.html" class="active">
+            Automação
+        </a>
+
+
+        <a href="logs.html">
+            Logs
+        </a>
+
+
+        <a href="apis.html">
+            APIs
+        </a>
+
+
+
+
+        <a href="settings.html">
+            Configurações
+        </a>
+
+    </nav>
+
+
+    <button id="logoutAdmin">
+        Sair
+    </button>
+
+
+</aside>
+
+
+
+<!-- CONTEÚDO -->
+
+<main class="main">
+
+
+<header class="topbar">
+
+
+    <div>
+
+        <h2>
+            Automação
+        </h2>
+
+        <p class="subtitle">
+            Monitoramento e controle das Automações MozAPI
+        </p>
+
+    </div>
+
+
+    <div class="server-status">
+
+        <span class="dot"></span>
+
+        Sistema Online
+
+    </div>
+
+
+</header>
+
+
+
+<!-- ESTATÍSTICAS -->
+
+<section class="automation-stats">
+
+
+    <div class="automation-card">
+
+        <span class="automation-card-label">
+            Estado
+        </span>
+
+        <strong
+        id="automationStatus"
+        class="status-active">
+
+            Activo
+
+        </strong>
+
+    </div>
+
+
+
+    <div class="automation-card">
+
+        <span class="automation-card-label">
+            Execuções
+        </span>
+
+        <strong id="totalExecutions">
+            0
+        </strong>
+
+    </div>
+
+
+
+    <div class="automation-card">
+
+        <span class="automation-card-label">
+            Sucessos
+        </span>
+
+        <strong id="successfulExecutions">
+            0
+        </strong>
+
+    </div>
+
+
+
+    <div class="automation-card">
+
+        <span class="automation-card-label">
+            Falhas
+        </span>
+
+        <strong id="failedExecutions">
+            0
+        </strong>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- CONTROLO DA AUTOMAÇÃO -->
+
+<section class="automation-panel">
+
+
+    <div class="automation-panel-header">
+
+        <div>
+
+            <h3>
+                Controlo da automação
+            </h3>
+
+            <p>
+                Activar ou desactivar o sistema de automação.
+            </p>
+
+        </div>
+
+
+        <button
+        id="automationToggle"
+        class="automation-toggle active">
+
+            <span></span>
+
+            <strong>
+                Activa
+            </strong>
+
+        </button>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- RESUMO -->
+
+<section class="automation-panel">
+
+
+    <h3>
+        Resumo
+    </h3>
+
+
+    <div class="automation-summary">
+
+
+        <div class="automation-summary-item">
+
+            <span>
+                Última execução
+            </span>
+
+            <strong id="lastExecution">
+                Nenhuma
+            </strong>
+
+        </div>
+
+
+
+        <div class="automation-summary-item">
+
+            <span>
+                Último evento
+            </span>
+
+            <strong id="lastEvent">
+                Nenhum evento registado
+            </strong>
+
+        </div>
+
+
+
+        <div class="automation-summary-item">
+
+            <span>
+                Tempo de resposta
+            </span>
+
+            <strong id="responseTime">
+                --
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- EVENTOS -->
+
+<section class="automation-panel">
+
+
+    <div class="automation-panel-header">
+
+        <div>
+
+            <h3>
+                Eventos recentes
+            </h3>
+
+            <p>
+                Actividade registada pelo sistema de automação.
+            </p>
+
+        </div>
+
+
+        <button
+        id="clearEvents"
+        class="automation-action">
+
+            Limpar
+
+        </button>
+
+    </div>
+
+
+
+    <div
+    id="automationEvents"
+    class="automation-events">
+
+
+        <div class="automation-empty">
+
+            <div class="automation-empty-icon">
+
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5">
+
+                    <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6v6l4 2"/>
+
+                    <circle
+                    cx="12"
+                    cy="12"
+                    r="9"/>
+
+                </svg>
+
+            </div>
+
+
+            <strong>
+                Nenhuma actividade
+            </strong>
+
+
+            <p>
+                Os eventos da automação aparecerão aqui.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+<!-- NOTIFICAÇÕES -->
+
+<section class="automation-panel">
+
+    <div class="automation-panel-header">
+
+        <div>
+
+            <h3>
+                Notificações
+            </h3>
+
+            <p>
+                Contactos e mensagens registadas pelo sistema.
+            </p>
+
+        </div>
+
+    </div>
+
+
+<!--    <div class="notification-filters">
+
+        <button
+        class="notification-filter active"
+        data-type="">
+
+            Todas
+
+        </button>
+
+
+        <button
+        class="notification-filter"
+        data-type="sms">
+
+            SMS
+
+        </button>
+
+
+        <button
+        class="notification-filter"
+        data-type="email">
+
+            E-mails
+
+        </button>
+
+	<button
+        class="notification-filter"
+        data-status="sent">
+        Enviadas
+       </button>
+
+    </div>
+-->
+<div class="notification-filters">
+
+    <button
+    class="notification-filter active"
+    data-status=""
+    data-type="">
+        Todas
+    </button>
+
+    <button
+    class="notification-filter"
+    data-status="pending"
+    data-type="">
+        Pendentes
+    </button>
+
+    <button
+    class="notification-filter"
+    data-status="sent"
+    data-type="">
+        Enviadas
+    </button>
+
+    <button
+    class="notification-filter"
+    data-status=""
+    data-type="sms">
+        SMS
+    </button>
+
+    <button
+    class="notification-filter"
+    data-status=""
+    data-type="email">
+        E-mails
+    </button>
+
+</div>
+
+    <div
+    id="notificationList"
+    class="notification-list">
+
+
+        <div class="automation-empty">
+
+            <strong>
+                A carregar notificações...
+            </strong>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- MODAL SMS -->
+
+<div
+id="smsModal"
+class="automation-modal">
+
+
+    <div class="automation-modal-card">
+
+
+        <div class="automation-modal-header">
+
+            <div>
+
+                <h3>
+                    Enviar SMS
+                </h3>
+
+                <p>
+                    Nova mensagem para o contacto seleccionado.
+                </p>
+
+            </div>
+
+
+            <button
+            id="closeSmsModal">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <div class="sms-recipient">
+
+            <span>
+                Destinatário
+            </span>
+
+            <strong id="smsRecipient">
+                --
+            </strong>
+
+        </div>
+
+
+        <label>
+            Mensagem
+        </label>
+
+
+        <textarea
+        id="smsMessage"
+        placeholder="Escreva a mensagem..."
+        maxlength="500"></textarea>
+
+
+        <div class="sms-counter">
+
+            <span id="smsCounter">
+                0 / 500
+            </span>
+
+        </div>
+
+
+        <div class="automation-modal-actions">
+
+            <button
+            id="cancelSms"
+            class="automation-action">
+
+                Cancelar
+
+            </button>
+
+
+            <button
+            id="prepareSms"
+            class="automation-primary">
+
+                Preparar SMS
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+<section class="automation-panel">
+
+    <div class="automation-panel-header">
+
+        <div>
+
+            <h3>
+                Envio em massa
+            </h3>
+
+            <p>
+                Enviar uma mensagem personalizada para vários utilizadores.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="broadcast-form">
+
+
+        <div class="broadcast-field">
+
+            <label>
+                Tipo de envio
+            </label>
+
+            <select id="broadcastType">
+
+                <option value="sms">
+                    SMS
+                </option>
+
+                <option value="email">
+                    E-mail
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="broadcast-field">
+
+            <label>
+                Utilizadores
+            </label>
+
+
+            <div class="broadcast-users-header">
+
+                <button
+                type="button"
+                id="selectAllUsers"
+                class="automation-action">
+
+                    Seleccionar todos
+
+                </button>
+
+
+                <span id="selectedUsersCount">
+                    0 seleccionados
+                </span>
+
+            </div>
+
+
+            <div
+            id="broadcastUsers"
+            class="broadcast-users">
+
+                <div class="automation-empty">
+
+                    <strong>
+                        A carregar utilizadores...
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="broadcast-field">
+
+            <label>
+                Mensagem
+            </label>
+
+
+            <textarea
+            id="broadcastMessage"
+            maxlength="500"
+            placeholder="Olá {{nome}}, seja bem-vindo à MozAPI."
+            rows="6"></textarea>
+
+
+            <div class="broadcast-message-footer">
+
+                <span>
+                    Variáveis:
+                    {{nome}}
+                    {{email}}
+                    {{telefone}}
+		    {{plano}}
+		    {{pedidos}}
+		    {{data}}
+                </span>
+
+                <span id="broadcastCounter">
+                    0 / 500
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div
+        id="broadcastPreview"
+        class="broadcast-preview">
+
+            <strong>
+                Pré-visualização
+            </strong>
+
+            <p>
+                Escreva uma mensagem para visualizar.
+            </p>
+
+        </div>
+
+
+        <button
+        type="button"
+        id="sendBroadcast"
+        class="automation-primary">
+
+            Enviar para seleccionados
+
+        </button>
+
+
+        <div
+        id="broadcastResult"
+        class="broadcast-result">
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- CONFIGURAÇÃO -->
+
+<section class="automation-panel">
+
+
+    <h3>
+        Configuração
+    </h3>
+
+
+    <div class="automation-settings">
+
+
+        <div class="automation-setting">
+
+
+            <div>
+
+                <strong>
+                    Registar eventos
+                </strong>
+
+                <p>
+                    Guardar as actividades da automação nos logs.
+                </p>
+
+            </div>
+
+
+            <label class="switch">
+
+                <input
+                type="checkbox"
+                id="eventLogging"
+                checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+
+        </div>
+
+
+
+        <div class="automation-setting">
+
+
+            <div>
+
+                <strong>
+                    Execução automática
+                </strong>
+
+                <p>
+                    Permitir que as automações sejam executadas
+                    automaticamente.
+                </p>
+
+            </div>
+
+
+            <label class="switch">
+
+                <input
+                type="checkbox"
+                id="automaticExecution"
+                checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+</div>
+
+
+
+<script src="js/automation.js"></script>
+
+</body>
+
+</html>

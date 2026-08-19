@@ -1,0 +1,497 @@
+/* =========================
+   UPGRADE BUTTON
+========================= */
+
+.upgrade-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:14px 24px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:rgba(148, 163, 184, 0.25);
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all .25s ease;
+
+    box-shadow:
+        0 0 18px rgba(56,189,248,.25);
+
+}
+
+.upgrade-btn:hover{
+
+    background:#333;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 0 28px rgba(56,189,248,.45);
+
+}
+
+.upgrade-btn:active{
+
+    transform:scale(.97);
+
+}
+
+
+/* =========================
+   MODAL MOZAPI
+========================= */
+
+.hidden{
+    display:none;
+}
+
+.modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:transparent;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    z-index:9999;
+
+    animation:fadeIn .25s ease;
+
+}
+
+.modal.show{
+
+    display:flex;
+
+}
+.modal-content{
+
+width:90%;
+
+    max-width:600px;
+
+    max-height:85vh;
+
+    overflow-y:auto;
+
+
+
+/*    width:100%;
+
+    max-width:1100px;
+*/
+
+    background: rgba(255,255,255,0.03);
+
+    border:1px solid #1f2937;
+
+    border-radius:22px;
+
+  /*
+  overflow:hidden;
+*/
+    box-shadow:
+        0 0 35px rgba(56,189,248,.15);
+
+    animation:slideUp .3s ease;
+
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.modal-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px 30px;
+
+    border-bottom:1px solid #1f2937;
+
+}
+
+.modal-header h2{
+
+    color:#fff;
+
+    font-size:28px;
+
+    margin-bottom:6px;
+
+}
+
+.modal-header p{
+
+    color:#9ca3af;
+
+    font-size:15px;
+
+}
+
+.modal-close{
+
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    cursor:pointer;
+
+    background:transparent;
+
+    color:#fff;
+
+    font-size:20px;
+
+    transition:0.25s;
+
+}
+
+.modal-close:hover{
+
+    background:black;
+    
+}
+
+/* =========================
+   BODY
+========================= */
+
+.modal-body{
+
+    padding:30px;
+
+}
+
+.plans-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+
+    gap:20px;
+
+}
+
+.plan-card{
+
+    background:#18181b;
+
+    border:1px solid #27272a;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    transition:.25s;
+
+    position:relative;
+
+}
+
+.plan-card:hover{
+
+    border-color:#38BDF8;
+
+    transform:translateY(-5px);
+
+}
+
+.featured{
+
+    border:2px solid #38BDF8;
+
+}
+
+.featured-badge{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    background:#38BDF8;
+
+    color:#000;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+    padding:6px 10px;
+
+    border-radius:999px;
+
+}
+
+.plan-tag{
+
+    display:inline-block;
+
+    background:#27272a;
+
+    color:#d4d4d8;
+
+    padding:5px 12px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    margin-bottom:18px;
+
+}
+
+.plan-card h3{
+
+    color:#fff;
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+.plan-card h1{
+
+    color:#38BDF8;
+
+    font-size:40px;
+
+    margin-bottom:5px;
+
+}
+
+.plan-card small{
+
+    color:#9ca3af;
+
+}
+
+.plan-card p{
+
+    color:#9ca3af;
+
+    margin:18px 0;
+
+}
+
+.plan-card ul{
+
+    list-style:none;
+
+    margin:25px 0;
+
+    padding:0;
+
+}
+
+.plan-card li{
+
+    color:#f4f4f5;
+
+    margin-bottom:12px;
+
+}
+
+/* =========================
+   BOTÃO
+========================= */
+
+.select-plan{
+
+    width:100%;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background: #333;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.select-plan:hover{
+
+    background:#7D7D7D;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.modal-footer{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:15px;
+
+    padding:25px 30px;
+
+    border-top:1px solid #1f2937;
+
+}
+
+.modal-footer button{
+
+    height:48px;
+
+    padding:0 25px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+#cancelPlan{
+
+    background:#27272a;
+
+    color:#fff;
+
+}
+
+#continuePlan{
+
+    background:#38BDF8;
+
+    color:#fff;
+
+}
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .modal-content{
+
+        max-height:90vh;
+
+        overflow:auto;
+
+    }
+
+    .modal-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+    .modal-footer{
+
+        flex-direction:column;
+
+    }
+
+    .modal-footer button{
+
+        width:100%;
+
+    }
+
+}

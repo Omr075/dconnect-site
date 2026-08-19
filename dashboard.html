@@ -3,50 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Daúdo Omar">
-    <meta name="description" content="Melhor site de APIs e bots em Moçambique">
+    <meta name="description" content="Dashboard mozapi">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="api, site, programação">
 
-    <title>MOZAPI Dashboard</title>
+    <title>mozapi/dashboard</title>
 
     <link rel="stylesheet" href="css/estilo.css">
+
+    <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
+<div id="navbarContainer"></div>
 
-    <h1>Painel MOZAPI</h1>
 
-    <hr>
+<a href="index.html">
+    <div class="logo"></div>
+    </a>
+<div class="container">
 
-    <h2>Informações da Conta</h2>
+    <br><br><br>
 
-    <p id="name"></p>
+    <h2 class="titulos"><b>Seu painel de gerenciamento</b></h2>
 
-    <p id="email"></p>
+    <p class="slogan">
+   Gerencie as suas chaves API, monitore o uso e aceda rapidamente à <a class="slogan" href="documentacao.html">documentação</a>.
+    </p>
 
-    <p id="plan"></p>
 
-    <p id="apikey"></p>
 
-    <p id="requests"></p>
 
-    <p id="created"></p>
+<div class="card">
 
-    <hr>
+  <h3 class="titulos">
+<!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+  <path d="M10 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM3.465 14.493a1.23 1.23 0 0 0 .41 1.412A9.957 9.957 0 0 0 10 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 0 0-13.074.003Z" />
+</svg>
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round-icon lucide-circle-user-round"><path d="M17.925 20.056a6 6 0 0 0-11.851.001"/><circle cx="12" cy="11" r="4"/><circle cx="12" cy="12" r="10"/></svg>
 
-    <button id="copyKey">
-        Copiar API Key
-    </button>
+<b>Dados da sua conta</b></h3>
+<br>
+  <h4 class=" branco" id="sa"></h4><h4 class="span2" id="sa2"></h4>
 
-    <button id="newKey">
-        Gerar Nova API Key
-    </button>
+  <div class="info-row">
+    <span class="label">Nome:</span>
+    <span id="name" class="value"></span>
+  </div>
 
-    <button id="logout">
-        Terminar Sessão
-    </button>
+  <div class="info-row">
+    <span class="label">Email:</span>
+    <span id="email" class="value"></span>
+  </div>
 
-    <script src="js/dashboard.js"></script>
+  <div class="info-row">
+    <span class="label">Plano:</span>
+    <span id="plan" class="value span"></span>
+  </div>
 
+  <div class="info-row">
+    <span class="label">Criado em</span>
+    <span id="created" class="value"></span>
+  </div>
+   
+  <div class="info-row">
+    <span class="label">Expira em:</span>
+    <span id="exp" class="value">---</span>
+  </div>
+
+</div>
+
+
+
+  <div class="card">
+
+        <h3 class="titulos"'>
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+  <path fill-rule="evenodd" d="M8 7a5 5 0 1 1 3.61 4.804l-1.903 1.903A1 1 0 0 1 9 14H8v1a1 1 0 0 1-1 1H6v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-2a1 1 0 0 1 .293-.707L8.196 8.39A5.002 5.002 0 0 1 8 7Zm5-3a.75.75 0 0 0 0 1.5A1.5 1.5 0 0 1 14.5 7 .75.75 0 0 0 16 7a3 3 0 0 0-3-3Z" clip-rule="evenodd" />
+</svg>
+ Sua chave API</h3>
+
+        <p id="apikey"></p>
+<div class="svg">
+<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+  <path fill-rule="evenodd" d="M3.28 2.22a.75.75 0 0 0-1.06 1.06l14.5 14.5a.75.75 0 1 0 1.06-1.06l-1.745-1.745a10.029 10.029 0 0 0 3.3-4.38 1.651 1.651 0 0 0 0-1.185A10.004 10.004 0 0 0 9.999 3a9.956 9.956 0 0 0-4.744 1.194L3.28 2.22ZM7.752 6.69l1.092 1.092a2.5 2.5 0 0 1 3.374 3.373l1.091 1.092a4 4 0 0 0-5.557-5.557Z" clip-rule="evenodd" />
+  <path d="m10.748 13.93 2.523 2.523a9.987 9.987 0 0 1-3.27.547c-4.258 0-7.894-2.66-9.337-6.41a1.651 1.651 0 0 1 0-1.186A10.007 10.007 0 0 1 2.839 6.02L6.07 9.252a4 4 0 0 0 4.678 4.678Z" />
+</svg>
+</div>
+
+<button id="copyKey">
+
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 20 20"
+         fill="currentColor"
+         aria-hidden="true">
+
+        <path fill-rule="evenodd" d="M13.887 3.182c.396.037.79.08 1.183.128C16.194 3.45 17 4.414 17 5.517V16.75A2.25 2.25 0 0 1 14.75 19h-9.5A2.25 2.25 0 0 1 3 16.75V5.517c0-1.103.806-2.068 1.93-2.207.393-.048.787-.09 1.183-.128A3.001 3.001 0 0 1 9 1h2c1.373 0 2.531.923 2.887 2.182ZM7.5 4A1.5 1.5 0 0 1 9 2.5h2A1.5 1.5 0 0 1 12.5 4v.5h-5V4Z" clip-rule="evenodd"/>
+
+    </svg>
+
+    <span>Copiar chave</span>
+
+</button>
+
+<button id="newKey">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+  <path fill-rule="evenodd" d="M15.312 11.424a5.5 5.5 0 0 1-9.201 2.466l-.312-.311h2.433a.75.75 0 0 0 0-1.5H3.989a.75.75 0 0 0-.75.75v4.242a.75.75 0 0 0 1.5 0v-2.43l.31.31a7 7 0 0 0 11.712-3.138.75.75 0 0 0-1.449-.39Zm1.23-3.723a.75.75 0 0 0 .219-.53V2.929a.75.75 0 0 0-1.5 0V5.36l-.31-.31A7 7 0 0 0 3.239 8.188a.75.75 0 1 0 1.448.389A5.5 5.5 0 0 1 13.89 6.11l.311.31h-2.432a.75.75 0 0 0 0 1.5h4.243a.75.75 0 0 0 .53-.219Z" clip-rule="evenodd" />
+</svg>
+
+    <span>Gerar no chave</span>
+</button>
+
+    </div>
+
+
+
+<div class="card">
+
+    <h3 class="titulos">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+  <path fill-rule="evenodd" d="M1 2.75A.75.75 0 0 1 1.75 2h16.5a.75.75 0 0 1 0 1.5H18v8.75A2.75 2.75 0 0 1 15.25 15h-1.072l.798 3.06a.75.75 0 0 1-1.452.38L13.41 18H6.59l-.114.44a.75.75 0 0 1-1.452-.38L5.823 15H4.75A2.75 2.75 0 0 1 2 12.25V3.5h-.25A.75.75 0 0 1 1 2.75ZM7.373 15l-.391 1.5h6.037l-.392-1.5H7.373Zm7.49-8.931a.75.75 0 0 1-.175 1.046 19.326 19.326 0 0 0-3.398 3.098.75.75 0 0 1-1.097.04L8.5 8.561l-2.22 2.22A.75.75 0 1 1 5.22 9.72l2.75-2.75a.75.75 0 0 1 1.06 0l1.664 1.663a20.786 20.786 0 0 1 3.122-2.74.75.75 0 0 1 1.046.176Z" clip-rule="evenodd" />
+</svg>
+
+
+<b>Estatísticas</b></h3>
+
+    <div class="info-row">
+        <span class="label">Requisições feitas:</span>
+        <span id="requests" class="value"></span>
+    </div>
+     
+     <div class="info-row">
+        <span class="label">Restantes:</span>
+        <span id="restantes" class="value">---</span>
+    </div>
+
+    <div class="info-row">
+        <span class="label">Estado da chave:</span>
+        <span id="statusApi" class="value span3">Ativa</span>
+    </div>
+
+    <div class="info-row">
+        <span class="label">Plano</span>
+        <span id="planStats" class="value span"></span>
+    </div>
+
+</div>
+
+<div class="card">
+
+<div class="tools-grid">
+
+    <a href="chat.html" class="tool-card">
+<svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+  <path d="M3.505 2.365A41.369 41.369 0 0 1 9 2c1.863 0 3.697.124 5.495.365 1.247.167 2.18 1.108 2.435 2.268a4.45 4.45 0 0 0-.577-.069 43.141 43.141 0 0 0-4.706 0C9.229 4.696 7.5 6.727 7.5 8.998v2.24c0 1.413.67 2.735 1.76 3.562l-2.98 2.98A.75.75 0 0 1 5 17.25v-3.443c-.501-.048-1-.106-1.495-.172C2.033 13.438 1 12.162 1 10.72V5.28c0-1.441 1.033-2.717 2.505-2.914Z" />
+  <path d="M14 6c-.762 0-1.52.02-2.271.062C10.157 6.148 9 7.472 9 8.998v2.24c0 1.519 1.147 2.839 2.71 2.935.214.013.428.024.642.034.2.009.385.09.518.224l2.35 2.35a.75.75 0 0 0 1.28-.531v-2.07c1.453-.195 2.5-1.463 2.5-2.915V8.998c0-1.526-1.157-2.85-2.729-2.936A41.645 41.645 0 0 0 14 6Z" />
+</svg>
+
+
+        <div>
+            <h4>Assistente</h4>
+            <p>Converse com a IA.</p>
+        </div>
+    </a>
+
+    <a href="documentacao.html" class="tool-card">
+<svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+  <path d="M10.75 16.82A7.462 7.462 0 0 1 15 15.5c.71 0 1.396.098 2.046.282A.75.75 0 0 0 18 15.06v-11a.75.75 0 0 0-.546-.721A9.006 9.006 0 0 0 15 3a8.963 8.963 0 0 0-4.25 1.065V16.82ZM9.25 4.065A8.963 8.963 0 0 0 5 3c-.85 0-1.673.118-2.454.339A.75.75 0 0 0 2 4.06v11a.75.75 0 0 0 .954.721A7.506 7.506 0 0 1 5 15.5c1.579 0 3.042.487 4.25 1.32V4.065Z" />
+</svg>
+
+
+        <div>
+            <h4>Documentação</h4>
+            <p>Guias e exemplos.</p>
+        </div>
+    </a>
+
+    <a href="playground.html" class="tool-card">
+<svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+  <path fill-rule="evenodd" d="M6.28 5.22a.75.75 0 0 1 0 1.06L2.56 10l3.72 3.72a.75.75 0 0 1-1.06 1.06L.97 10.53a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Zm7.44 0a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L17.44 10l-3.72-3.72a.75.75 0 0 1 0-1.06ZM11.377 2.011a.75.75 0 0 1 .612.867l-2.5 14.5a.75.75 0 0 1-1.478-.255l2.5-14.5a.75.75 0 0 1 .866-.612Z" clip-rule="evenodd" />
+</svg>
+
+
+        <div>
+            <h4>Playground</h4>
+            <p>Teste endpoints.</p>
+        </div>
+    </a>
+
+    <a href="logs.html" class="tool-card">
+<svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+  <path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1ZM9.5 6A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1ZM3.5 10A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1Z" />
+</svg>
+
+
+        <div>
+            <h4>Estatísticas</h4>
+            <p>Consumo da API.</p>
+        </div>
+    </a>
+
+    <a href="apis.html" class="tool-card">
+
+<svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+  <path fill-rule="evenodd" d="M1 11.27c0-.246.033-.492.099-.73l1.523-5.521A2.75 2.75 0 0 1 5.273 3h9.454a2.75 2.75 0 0 1 2.651 2.019l1.523 5.52c.066.239.099.485.099.732V15a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3.73Zm3.068-5.852A1.25 1.25 0 0 1 5.273 4.5h9.454a1.25 1.25 0 0 1 1.205.918l1.523 5.52c.006.02.01.041.015.062H14a1 1 0 0 0-.86.49l-.606 1.02a1 1 0 0 1-.86.49H8.236a1 1 0 0 1-.894-.553l-.448-.894A1 1 0 0 0 6 11H2.53l.015-.062 1.523-5.52Z" clip-rule="evenodd" />
+</svg>
+
+        <div>
+            <h4>Modelos</h4>
+            <p>Explorar modelos.</p>
+        </div>
+    </a>
+
+    <a href="settings.html" class="tool-card">
+
+
+
+<svg id"svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+  <path fill-rule="evenodd" d="M8.34 1.804A1 1 0 0 1 9.32 1h1.36a1 1 0 0 1 .98.804l.295 1.473c.497.144.971.342 1.416.587l1.25-.834a1 1 0 0 1 1.262.125l.962.962a1 1 0 0 1 .125 1.262l-.834 1.25c.245.445.443.919.587 1.416l1.473.294a1 1 0 0 1 .804.98v1.361a1 1 0 0 1-.804.98l-1.473.295a6.95 6.95 0 0 1-.587 1.416l.834 1.25a1 1 0 0 1-.125 1.262l-.962.962a1 1 0 0 1-1.262.125l-1.25-.834a6.953 6.953 0 0 1-1.416.587l-.294 1.473a1 1 0 0 1-.98.804H9.32a1 1 0 0 1-.98-.804l-.295-1.473a6.957 6.957 0 0 1-1.416-.587l-1.25.834a1 1 0 0 1-1.262-.125l-.962-.962a1 1 0 0 1-.125-1.262l.834-1.25a6.957 6.957 0 0 1-.587-1.416l-1.473-.294A1 1 0 0 1 1 10.68V9.32a1 1 0 0 1 .804-.98l1.473-.295c.144-.497.342-.971.587-1.416l-.834-1.25a1 1 0 0 1 .125-1.262l.962-.962A1 1 0 0 1 5.38 3.03l1.25.834a6.957 6.957 0 0 1 1.416-.587l.294-1.473ZM13 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" clip-rule="evenodd" />
+</svg>
+
+        <div>
+            <h4>Configurações</h4>
+            <p>Preferências da conta.</p>
+        </div>
+    </a>
+
+</div>
+
+    </div>
+
+
+<button id="logout">
+
+    <svg id="svg" xmlns="http://www.w3.org/2000/svg"
+         width="18"
+         height="18"
+         viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round">
+
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+        <polyline points="16 17 21 12 16 7"/>
+        <line x1="21" y1="12" x2="9" y2="12"/>
+
+    </svg>
+
+    <span>Terminar Sessão</span>
+
+</button>
+
+<!--
+<p class="slogan">
+            Em breve:
+        </p>
+-->
+</div>
+
+<script src="js/dashboard.js"></script>
+
+<script src="js/navbar.js"></script>
+
+<script src="js/logout.js"></script>
 </body>
 </html>
+
