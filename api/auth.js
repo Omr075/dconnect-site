@@ -1,6 +1,4 @@
 const express = require("express");
-const fs = require("fs");
-const path = require("path");
 const {
     addNotification
 } =
@@ -19,9 +17,6 @@ const passwordResetsPath =
 
 const gatewayPath =
     path.join(__dirname, "../config/gateway.json");
-
-const adminSessionsPath =
-    path.join(__dirname, "../database/admin_sessions.json");
 
 
 const { OAuth2Client } = require("google-auth-library");
@@ -144,7 +139,7 @@ router.post("/register", (req, res) => {
 
             user: newUser
 
-        });
+	        });
 
     } catch (err) {
 
@@ -189,46 +184,32 @@ if (
 ) {
 
 
-    const sessions =
-        JSON.parse(
-            fs.readFileSync(adminSessionsPath)
-        );
+const token =
+    Math.random()
+    .toString(36)
+    .substring(2, 20);
 
 
-    const token =
-        Math.random()
-        .toString(36)
-        .substring(2, 20);
+const now =
+    Date.now();
 
 
-    const now =
-        Date.now();
+const expiresAt =
+    now + gateway.tokenTTL;
 
 
-    sessions.push({
-
+db.prepare(`
+    INSERT INTO admin_sessions (
         token,
-
-        createdAt: now,
-
-        expiresAt:
-            now + gateway.tokenTTL
-
-    });
-
-
-    fs.writeFileSync(
-
-        adminSessionsPath,
-
-        JSON.stringify(
-            sessions,
-            null,
-            2
-        )
-
-    );
-
+        created_at,
+        expires_at
+    )
+    VALUES (?, ?, ?)
+`).run(
+    token,
+    now,
+    expiresAt
+);
 
     return res.json({
 

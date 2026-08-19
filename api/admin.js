@@ -8,12 +8,6 @@ const router =
 express.Router();
 
 
-const adminsPath =
-path.join(
-    __dirname,
-    "../database/admins.json"
-);
-
 
 router.post(
     "/login",
@@ -66,37 +60,53 @@ router.post(
              * Verificar administrador
              */
 
-            const admins =
-                JSON.parse(
-                    fs.readFileSync(
-                        adminsPath,
-                        "utf8"
-                    )
-                );
+/*
+ * Verificar administrador
+ * As credenciais são obtidas
+ * através das variáveis de ambiente
+ * ou do Gateway.
+ */
+
+const gatewayPath =
+    path.join(
+        __dirname,
+        "../config/gateway.json"
+    );
+
+const gateway =
+    JSON.parse(
+        fs.readFileSync(
+            gatewayPath,
+            "utf8"
+        )
+    );
+
+const adminEmail =
+    process.env.GATEWAY_EMAIL ||
+    gateway.email;
+
+const adminPassword =
+    process.env.GATEWAY_PASSWORD ||
+    gateway.password;
 
 
-            const admin =
-                admins.find(
-                    a =>
-                    a.username === username &&
-                    a.password === password &&
-                    a.enabled
-                );
+const admin =
+    username === adminEmail &&
+    password === adminPassword;
 
 
-            if(!admin){
+if(!admin){
 
-                return res.json({
+    return res.json({
 
-                    status:false,
+        status:false,
 
-                    message:
-                    "Credenciais administrativas inválidas."
+        message:
+        "Credenciais administrativas inválidas."
 
-                });
+    });
 
-            }
-
+}
 
             /*
              * Criar sessão administrativa
